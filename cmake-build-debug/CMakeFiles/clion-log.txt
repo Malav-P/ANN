@@ -1,0 +1,4 @@
+"D:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\malav\Downloads\ANN-master\ANN-master
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/malav/Downloads/ANN-master/ANN-master/cmake-build-debug
