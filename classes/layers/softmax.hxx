@@ -78,7 +78,7 @@ class Softmax {
 
         // update parameters for the layer
         template<typename Optimizer>
-        void Update_Params(Optimizer optimizer, size_t normalizer) {/* nothing to do */}
+        void Update_Params(Optimizer* optimizer, size_t normalizer) {/* nothing to do */}
 
         //! ----------------------------------------------------------------------------------------------------------
 

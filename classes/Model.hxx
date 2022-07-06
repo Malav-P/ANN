@@ -38,7 +38,13 @@ class Model {
 
         // make a pass through the network, updating all the parameters
         template<typename Optimizer>
-        void Update_Params(Optimizer optimizer, size_t normalizer);
+        void Update_Params(Optimizer* optimizer, size_t normalizer);
+
+        // get number of layers in model
+        size_t get_size() const {return network.size();}
+
+        // get const reference to vector of layers
+        std::vector<LayerTypes> get_network() const {return network;}
 
     private:
         std::vector<LayerTypes> network;

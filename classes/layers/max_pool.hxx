@@ -39,7 +39,7 @@ class MaxPool {
 
         // update parameters in this layer (during learning)
         template<typename Optimizer>
-        void Update_Params(Optimizer optimizer, size_t normalizer) {/* do nothing, no parameters to learn in this layer */}
+        void Update_Params(Optimizer* optimizer, size_t normalizer) {/* do nothing, no parameters to learn in this layer */}
 
         //! ----------------------------------------------------------------------------------------------------------
 

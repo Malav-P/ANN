@@ -73,7 +73,7 @@ int main()
     SGD optimizer(0.1);
 
     // update parameters for optimizer
-    conv.Update_Params(optimizer,1);
+    conv.Update_Params(&optimizer,1);
 
     for (size_t i = 0; i<conv.in_shape().height; i++)
     {

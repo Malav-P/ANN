@@ -57,7 +57,7 @@ public:
     template<typename T>
     void operator()(T* operand) const { (*operand).Update_Params(optimizer, normalizer);}
 
-    Optimizer optimizer {};
+    Optimizer* optimizer {nullptr};
     size_t normalizer {1};
 };
 #endif //ANN_VISITORS_HXX

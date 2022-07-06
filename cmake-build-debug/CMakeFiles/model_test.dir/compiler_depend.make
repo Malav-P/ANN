@@ -661,7 +661,9 @@ CMakeFiles/model_test.dir/testing/model_test.cpp.obj: ../testing/model_test.cpp 
   C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/istream \
   C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/istream.tcc \
   ../classes/optimizers/SGD.hxx \
-  ../classes/lin_alg/data_types.hxx
+  ../classes/lin_alg/data_types.hxx \
+  ../classes/optimizers/momentum.hxx \
+  ../classes/Model.hxx
 
 
 C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/vector:
@@ -1967,3 +1969,5 @@ C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/locale_facets.tcc:
 C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/ostream.tcc:
 
 C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/istream:
+
+../classes/optimizers/momentum.hxx:

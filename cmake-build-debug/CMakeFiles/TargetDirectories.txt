@@ -1,8 +1,8 @@
-C:/Users/malav/Downloads/ANN-master/ANN-master/cmake-build-debug/CMakeFiles/linalg_test.dir
-C:/Users/malav/Downloads/ANN-master/ANN-master/cmake-build-debug/CMakeFiles/convolution_test.dir
-C:/Users/malav/Downloads/ANN-master/ANN-master/cmake-build-debug/CMakeFiles/maxpool_test.dir
-C:/Users/malav/Downloads/ANN-master/ANN-master/cmake-build-debug/CMakeFiles/model_test.dir
-C:/Users/malav/Downloads/ANN-master/ANN-master/cmake-build-debug/CMakeFiles/meanpool_test.dir
-C:/Users/malav/Downloads/ANN-master/ANN-master/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/malav/Downloads/ANN-master/ANN-master/cmake-build-debug/CMakeFiles/linear_test.dir
-C:/Users/malav/Downloads/ANN-master/ANN-master/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/malav/CLionProjects/ANN-master/ANN-master/cmake-build-debug/CMakeFiles/linalg_test.dir
+C:/Users/malav/CLionProjects/ANN-master/ANN-master/cmake-build-debug/CMakeFiles/convolution_test.dir
+C:/Users/malav/CLionProjects/ANN-master/ANN-master/cmake-build-debug/CMakeFiles/maxpool_test.dir
+C:/Users/malav/CLionProjects/ANN-master/ANN-master/cmake-build-debug/CMakeFiles/model_test.dir
+C:/Users/malav/CLionProjects/ANN-master/ANN-master/cmake-build-debug/CMakeFiles/meanpool_test.dir
+C:/Users/malav/CLionProjects/ANN-master/ANN-master/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/malav/CLionProjects/ANN-master/ANN-master/cmake-build-debug/CMakeFiles/linear_test.dir
+C:/Users/malav/CLionProjects/ANN-master/ANN-master/cmake-build-debug/CMakeFiles/edit_cache.dir

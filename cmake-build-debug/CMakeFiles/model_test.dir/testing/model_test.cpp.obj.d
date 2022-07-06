@@ -1,6 +1,6 @@
 CMakeFiles/model_test.dir/testing/model_test.cpp.obj: \
- C:\Users\malav\Downloads\ANN-master\ANN-master\testing\model_test.cpp \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/Model.hxx \
+ C:\Users\malav\CLionProjects\ANN-master\ANN-master\testing\model_test.cpp \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/Model.hxx \
  C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/vector \
  C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h \
  C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32/bits/c++config.h \
@@ -53,9 +53,9 @@ CMakeFiles/model_test.dir/testing/model_test.cpp.obj: \
  C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/functional_hash.h \
  C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/range_access.h \
  C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/vector.tcc \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/layers/layer_types.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/activation\ functions/activation_types.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/prereqs.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/layers/layer_types.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/activation\ functions/activation_types.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/prereqs.hxx \
  C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/cstdlib \
  C:/MinGW/i686-w64-mingw32/include/stdlib.h \
  C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include-fixed/limits.h \
@@ -128,17 +128,17 @@ CMakeFiles/model_test.dir/testing/model_test.cpp.obj: \
  C:/MinGW/i686-w64-mingw32/include/sec_api/string_s.h \
  C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/cmath \
  C:/MinGW/i686-w64-mingw32/include/math.h \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/helpers/pair.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/activation\ functions/relU.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/lin_alg/vector.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/prereqs.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/lin_alg/data_types.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/lin_alg/vector.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/lin_alg/mat.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/lin_alg/mat_impl.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/lin_alg/vector_impl.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/activation\ functions/sigmoid.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/activation\ functions/tanh.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/helpers/pair.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/activation\ functions/relU.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/lin_alg/vector.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/prereqs.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/lin_alg/data_types.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/lin_alg/vector.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/lin_alg/mat.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/lin_alg/mat_impl.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/lin_alg/vector_impl.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/activation\ functions/sigmoid.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/activation\ functions/tanh.hxx \
  C:/MinGW/include/boost_1_79_0/boost/variant.hpp \
  C:/MinGW/include/boost_1_79_0/boost/variant/variant.hpp \
  C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/cstddef \
@@ -607,12 +607,12 @@ CMakeFiles/model_test.dir/testing/model_test.cpp.obj: \
  C:/MinGW/include/boost_1_79_0/boost/type_traits/add_pointer.hpp \
  C:/MinGW/include/boost_1_79_0/boost/variant/visitor_ptr.hpp \
  C:/MinGW/include/boost_1_79_0/boost/variant/bad_visit.hpp \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/layers/convolution.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/lin_alg/data_types.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/layers/convolution_impl.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/lin_alg/vector.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/layers/linear.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/layers/linear_impl.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/layers/convolution.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/lin_alg/data_types.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/layers/convolution_impl.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/lin_alg/vector.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/layers/linear.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/layers/linear_impl.hxx \
  C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/random \
  C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/random.h \
  C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/uniform_int_dist.h \
@@ -620,17 +620,17 @@ CMakeFiles/model_test.dir/testing/model_test.cpp.obj: \
  C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/random.tcc \
  C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/numeric \
  C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_numeric.h \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/layers/max_pool.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/layers/max_pool_impl.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/layers/mean_pool.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/layers/mean_pool_impl.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/layers/softmax.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/prereqs.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/helpers/visitors.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/helpers/pair.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/lin_alg/data_types.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/Model_impl.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/Model.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/layers/max_pool.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/layers/max_pool_impl.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/layers/mean_pool.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/layers/mean_pool_impl.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/layers/softmax.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/prereqs.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/helpers/visitors.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/helpers/pair.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/lin_alg/data_types.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/Model_impl.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/Model.hxx \
  C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/algorithm \
  C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_algo.h \
  C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/algorithmfwd.h \
@@ -658,5 +658,7 @@ CMakeFiles/model_test.dir/testing/model_test.cpp.obj: \
  C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/ostream.tcc \
  C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/istream \
  C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/istream.tcc \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/optimizers/SGD.hxx \
- C:/Users/malav/Downloads/ANN-master/ANN-master/classes/lin_alg/data_types.hxx
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/optimizers/SGD.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/lin_alg/data_types.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/optimizers/momentum.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/Model.hxx

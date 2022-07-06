@@ -151,11 +151,17 @@ Vector<T> Vector<T>::operator*(Mat<T> &other)
 template<typename T>
 Vector<T> Vector<T>::operator*(double c)
 {
-    // do * operation
-    for (size_t i = 0; i < _length ; i++) { _data[i] *= c;}
 
-    // return the current object
-    return (*this);
+    // initialize return variable
+    Vector<T> obj(_length);
+
+    // do multiplication operation
+    for (size_t i = 0; i < _length; i++)
+    { obj[i] = _data[i] * c; }
+
+
+    // return result
+    return obj;
 }
 
 //! ----------------------------------------------------------------

@@ -164,14 +164,14 @@ void Convolution::Backward(Vector<double> &dLdY, Vector<double> &dLdX)
 }
 
 template<typename Optimizer>
-void Convolution::Update_Params(Optimizer optimizer, size_t normalizer)
+void Convolution::Update_Params(Optimizer* optimizer, size_t normalizer)
 {
     // positions in the kernel that had zeros are parameters that are not meant to be learned. We must
     // set the same positions in _dLdW to zero before updating the _kernel
     _dLdW.keep(_indices);
 
     // update the weights according to the optimizer
-    optimizer.Forward(_kernel, _dLdW, normalizer);
+    (*optimizer).Forward(_kernel, _dLdW, normalizer);
 
     // fill the gradient with zeros
     _dLdW.fill(0);

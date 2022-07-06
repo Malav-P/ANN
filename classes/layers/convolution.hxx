@@ -43,7 +43,7 @@ class Convolution {
 
         // update the weights and biases according to their gradients
         template<typename Optimizer>
-        void Update_Params(Optimizer optimizer, size_t normalizer);
+        void Update_Params(Optimizer* optimizer, size_t normalizer);
 
         //! -----------------------------------------------------------------------------------------------------------
 

@@ -135,6 +135,26 @@ Mat<T> &Mat<T>::operator+=(const Mat<T> &other)
     return (*this);
 }
 //! ------------------------------------------------------------------------------
+//! += operator----------------------------------------------------------------
+template<typename T>
+Mat<T> Mat<T>::operator+(const Mat<T> &rhs)
+{
+
+    // assert that matrix dimensions are the same
+    assert(_rows == rhs._rows && _cols == rhs._cols);
+
+    // initialize return variable
+    Mat<T> obj(_rows ,_cols);
+
+    // do + operation
+    for (size_t i = 0; i < _rows ; i++){ for (size_t j = 0; j < _cols ; j++){
+            obj(i,j)  = rhs(i,j) + (*this)(i,j);
+        }}
+
+    // return the current object
+    return obj;
+}
+//! ------------------------------------------------------------------------------
 //! matrix index operator myObj(i,j) returns the i-jth element of matrix ------------------
 template<typename T>
 T& Mat<T>::operator()(size_t i, size_t j) { return _data[i * _cols + j]; }
@@ -393,6 +413,8 @@ void Mat<T>::rotate_once()
     // rotation state can be one of 0, 1, 2, or 3
     _rot %= 4;
 }
+
+
 //! ---------------------------------------------------------------------------------------
 
 #endif //ANN_MAT_IMPL_HXX

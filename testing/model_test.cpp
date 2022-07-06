@@ -4,6 +4,7 @@
 
 #include "../classes/Model.hxx"
 #include "../classes/optimizers/SGD.hxx"
+#include "../classes/optimizers/momentum.hxx"
 
 int main()
 {
@@ -11,7 +12,8 @@ int main()
 
     double in_arr[16] = {1, 2, 3, 4, 5, 6, 7, 8, 9,
                          10, 11, 12, 13, 14, 15, 16};
-    Vector<double> input(16, in_arr);
+
+    Vector<double>* input_ptr = new Vector<double>(16, in_arr);
 
     double fltr_arr[4] = {1,1,1,1};
     Mat<double> fltr(2, fltr_arr);
@@ -49,17 +51,17 @@ int main()
 
 
 
-    model.Forward(input, output);
+    model.Forward(*input_ptr, output);
 
     // must call model.Forward(input, output) before calling Backward function because
     // _local_input member variable must be filled
     model.Backward(dLdY, dLdX);
 
     // choose an optimizer
-    SGD optimizer(0.1);
+    Momentum optimizer(model, 0.1, 0.9);
 
     // update parameters in the network
-    model.Update_Params(optimizer,1);
+    model.Update_Params(&optimizer,1);
 
 }
 

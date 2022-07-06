@@ -46,6 +46,9 @@ class Mat {
         // += operator
         Mat<T>& operator+=(const Mat<T>& other);
 
+        // + operator
+        Mat<T> operator+(const Mat<T>& rhs);
+
         // index operator
         T& operator()(size_t i, size_t j);
 

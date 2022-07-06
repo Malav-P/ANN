@@ -67,15 +67,18 @@ void Linear<activ_func>::Backward(const Vector<double> &dLdZ, Vector<double> &dL
 
 template<typename activ_func>
 template<typename Optimizer>
-void Linear<activ_func>::Update_Params(Optimizer optimizer, size_t normalizer)
+void Linear<activ_func>::Update_Params(Optimizer* optimizer, size_t normalizer)
 {
+
+    // update the biases and reset dLdB to zeros. MUST UPDATE BIASES FIRST or else member variable k of momentum optmizer
+    // is prematurely updated
+    (*optimizer).Forward(_biases, _dLdB, normalizer);
+    _dLdB.fill(0);
+
     // update the weights and reset dLdW to zeros
-    optimizer.Forward(_weights, _dLdW, normalizer);
+    (*optimizer).Forward(_weights, _dLdW, normalizer);
     _dLdW.fill(0);
 
-    // update the biases and reset dLdB to zeros
-    optimizer.Forward(_biases, _dLdB, normalizer);
-    _dLdB.fill(0);
 
 //    switch (optimizer)
 //    {

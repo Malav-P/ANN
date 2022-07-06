@@ -53,7 +53,7 @@ void Model::Backward(Vector<double> &dLdY, Vector<double>& dLdX)
 }
 
 template<typename Optimizer>
-void Model::Update_Params(Optimizer optimizer, size_t normalizer)
+void Model::Update_Params(Optimizer* optimizer, size_t normalizer)
 {
     // create visitor object
     Update_parameters_visitor<Optimizer> visitor {};
