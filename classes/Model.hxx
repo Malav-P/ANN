@@ -27,6 +27,8 @@ class Model {
 
         // train the network on the _data
 
+        void /*return_type TBD */ Train(size_t opt /* args to be filled */ );
+
         // return outshape of a layer
         Dims get_outshape(size_t idx){ return boost::apply_visitor(Outshape_visitor(), network[idx]);}
 

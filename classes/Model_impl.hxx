@@ -8,6 +8,7 @@
 #include "Model.hxx"
 #include <algorithm>
 #include <iostream>
+#include "optimizers/optimizers.hxx"
 
 void
 Model::Forward(Vector<double> &input, Vector<double>& output)
@@ -67,6 +68,24 @@ void Model::Update_Params(Optimizer* optimizer, size_t normalizer)
     {
         boost::apply_visitor(visitor, layer);
     }
+}
+
+void /* return type TBD */ Model::Train(size_t opt /* args TBD */)
+{
+    // initialize the optimizer using a switch statement
+
+    // determine if number of training points is divisible by the batch_size
+    //      - if there is no remainder, we will be updating the parameters (num training points) / (batch_size) times
+    //      - if there is a remainder, we will update the parameters |_ (num training points) / (batch_size) _| times
+    //        and then proceed to train on the remainder of the training set ( num training points % batch_size)
+
+
+    // for each data point in my training set:
+    //      - make a Forward pass
+    //      - compute dLdY, the loss gradient at the output layer as a result of this Forward pass
+    //      - make a Backward pass, backpropagating the calculated loss gradient
+    //      - if we have sent a batch_size amount of data points forward and backward after this last pass, update the
+    //        parameters in the networks using Update_Params function
 }
 
 #endif //ANN_MODEL_IMPL_HXX
