@@ -10,8 +10,8 @@
 #include <iostream>
 #include "optimizers/optimizers.hxx"
 
-void
-Model::Forward(Vector<double> &input, Vector<double>& output)
+template<typename LossFunction>
+void Model<LossFunction>::Forward(Vector<double> &input, Vector<double>& output)
 {
     Forward_visitor visitor{};
     visitor.input = &input;
@@ -31,7 +31,8 @@ Model::Forward(Vector<double> &input, Vector<double>& output)
     output = *(visitor.output);
 }
 
-void Model::Backward(Vector<double> &dLdY, Vector<double>& dLdX)
+template<typename LossFunction>
+void Model<LossFunction>::Backward(Vector<double> &dLdY, Vector<double>& dLdX)
 {
     Backward_visitor visitor{};
     visitor.dLdY = &dLdY;
@@ -53,8 +54,9 @@ void Model::Backward(Vector<double> &dLdY, Vector<double>& dLdX)
     dLdX = *(visitor.dLdX);
 }
 
+template<typename LossFunction>
 template<typename Optimizer>
-void Model::Update_Params(Optimizer* optimizer, size_t normalizer)
+void Model<LossFunction>::Update_Params(Optimizer* optimizer, size_t normalizer)
 {
     // create visitor object
     Update_parameters_visitor<Optimizer> visitor {};
@@ -68,17 +70,50 @@ void Model::Update_Params(Optimizer* optimizer, size_t normalizer)
     {
         boost::apply_visitor(visitor, layer);
     }
+
+    // reset the optimizer for the next pass through the network
+    (*optimizer).reset();
 }
 
-void /* return type TBD */ Model::Train(size_t opt /* args TBD */)
+template<typename LossFunction>
+void Model<LossFunction>::Train(size_t opt, DataSet& training_set /* args TBD */)
 {
+
     // initialize the optimizer using a switch statement
+
+    void* optimizer;
+
+    switch (opt)
+    {
+        case 0: // SGD
+        {
+            optimizer = static_cast<SGD*> (new SGD());
+            break;
+        }
+
+        case 1: // Momentum
+        {
+            optimizer = static_cast<Momentum*>(new Momentum(*this, 0.1, 0.9)) ;
+            break;
+        }
+
+        default : // default case (this needs to be changed)
+        {
+            optimizer = static_cast<int*>(new int);
+        }
+    }
+
 
     // determine if number of training points is divisible by the batch_size
     //      - if there is no remainder, we will be updating the parameters (num training points) / (batch_size) times
     //      - if there is a remainder, we will update the parameters |_ (num training points) / (batch_size) _| times
     //        and then proceed to train on the remainder of the training set ( num training points % batch_size)
 
+    size_t num_training_points, batch_size, remainder;
+
+    num_training_points = training_set.shape.width;
+
+    remainder = num_training_points % batch_size;
 
     // for each data point in my training set:
     //      - make a Forward pass
@@ -86,6 +121,31 @@ void /* return type TBD */ Model::Train(size_t opt /* args TBD */)
     //      - make a Backward pass, backpropagating the calculated loss gradient
     //      - if we have sent a batch_size amount of data points forward and backward after this last pass, update the
     //        parameters in the networks using Update_Params function
+
+    Vector<double> output, dLdY, dLdX;
+    size_t count = 0;
+
+    for (Vector_Pair datapoint : training_set.datapoints)
+    {
+        // make forward pass, datapoint.first is the input
+        Forward((datapoint.first), output);
+
+        // compute dLdY, datapoint.second is the label
+        dLdY = loss.grad(output, (datapoint.second));
+
+        // make a backward pass
+        Backward(dLdY, dLdX);
+        count += 1;
+
+        // update parameters if we have propagated batch_size number of samples
+        if (count % batch_size == 0) { Update_Params(optimizer, batch_size); }
+    }
+
+    // if remainder exists we can update the model with the remaining datapoints
+    if (remainder != 0) { Update_Params(optimizer, remainder);}
+
+    // free memory for optimizer
+    delete optimizer;
 }
 
 #endif //ANN_MODEL_IMPL_HXX

@@ -631,6 +631,9 @@ CMakeFiles/model_test.dir/testing/model_test.cpp.obj: ../testing/model_test.cpp 
   ../classes/helpers/visitors.hxx \
   ../classes/helpers/pair.hxx \
   ../classes/lin_alg/data_types.hxx \
+  ../classes/datasets/dataset.hxx \
+  ../classes/prereqs.hxx \
+  ../classes/lin_alg/data_types.hxx \
   ../classes/Model_impl.hxx \
   ../classes/Model.hxx \
   C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/algorithm \
@@ -660,10 +663,16 @@ CMakeFiles/model_test.dir/testing/model_test.cpp.obj: ../testing/model_test.cpp 
   C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/ostream.tcc \
   C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/istream \
   C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/istream.tcc \
-  ../classes/optimizers/SGD.hxx \
-  ../classes/lin_alg/data_types.hxx \
+  ../classes/optimizers/optimizers.hxx \
   ../classes/optimizers/momentum.hxx \
-  ../classes/Model.hxx
+  ../classes/lin_alg/data_types.hxx \
+  ../classes/Model.hxx \
+  ../classes/optimizers/SGD.hxx \
+  ../classes/optimizers/SGD.hxx \
+  ../classes/optimizers/momentum.hxx \
+  ../classes/loss\ functions/cross_entropy.hxx \
+  ../classes/lin_alg/data_types.hxx \
+  ../classes/prereqs.hxx
 
 
 C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/vector:
@@ -1398,6 +1407,8 @@ C:/MinGW/include/boost_1_79_0/boost/preprocessor/repetition/repeat.hpp:
 
 C:/MinGW/include/boost_1_79_0/boost/preprocessor/debug/error.hpp:
 
+../classes/optimizers/optimizers.hxx:
+
 C:/MinGW/include/boost_1_79_0/boost/preprocessor/detail/limits/auto_rec_256.hpp:
 
 C:/MinGW/include/boost_1_79_0/boost/preprocessor/repetition/limits/repeat_256.hpp:
@@ -1940,6 +1951,8 @@ C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_numeric.h:
 
 ../classes/helpers/visitors.hxx:
 
+../classes/datasets/dataset.hxx:
+
 ../classes/Model_impl.hxx:
 
 C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_algo.h:
@@ -1971,3 +1984,5 @@ C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/ostream.tcc:
 C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/istream:
 
 ../classes/optimizers/momentum.hxx:
+
+../classes/loss\ functions/cross_entropy.hxx:

@@ -58,6 +58,9 @@ class Vector {
         // add operator
         Vector<T> operator + (const Vector<T>& other);
 
+        // minus operator
+        Vector<T> operator - (const Vector<T>& other);
+
         //! ----------------------------------------------------------------------------------------------------------
 
 
@@ -73,6 +76,9 @@ class Vector {
 
         // compute element-wise product between two Vectors
         Vector<T> eprod(const Vector<T>& other) const;
+
+        // compute the element-wise quotient of two Vectors
+        Vector<T> edivide(const Vector<T>& other);
 
         // get the _length of vector (read only)
         size_t const& get_len() const {return _length;}

@@ -126,6 +126,5 @@ class Mat {
 
 
 
-
 #include "mat_impl.hxx"
 #endif //ANN_MAT_HXX

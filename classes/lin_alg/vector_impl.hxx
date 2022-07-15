@@ -202,7 +202,24 @@ Vector<T> Vector<T>::operator+(const Vector<T> &other)
     return obj;
 }
 //! ---------------------------------------------------------------------
+//! - operator ---------------------------------------------------------------------
+template<typename T>
+Vector<T> Vector<T>::operator-(const Vector<T> &other)
+{
+    // check that vectors are of equal length
+    assert(_length == other._length);
 
+    // initialize return variable
+    Vector<T> obj(_length);
+
+    // do subtraction operation
+    for (size_t i = 0; i < _length; i++)
+    { obj[i] = _data[i] - other._data[i]; }
+
+    // return result
+    return obj;
+}
+//! ---------------------------------------------------------------------
 //! dot product between two vectors ---------------------------------------------------------------------
 template<typename T>
 T Vector<T>::dot(const Vector<T> &other)
@@ -256,6 +273,25 @@ Vector<T> Vector<T>::eprod(const Vector<T> &other) const
 
     // do element-wise multiplication operation
     for (size_t i = 0; i < _length; i++) { obj._data[i] = _data[i] * other._data[i]; }
+
+    // return result
+    return obj;
+}
+//! ---------------------------------------------------------------------
+
+//! element-wise quotient of two vectors---------------------------------------------------------------------
+
+template<typename T>
+Vector<T> Vector<T>::edivide(const Vector<T> &other)
+{
+    // assert that number of elements in other vector and this vector are equal
+    assert(other._length == _length);
+
+    // initialize return variable
+    Vector<T> obj(_length);
+
+    // do element-wise multiplication operation
+    for (size_t i = 0; i < _length; i++) { obj._data[i] = _data[i] / other._data[i]; }
 
     // return result
     return obj;

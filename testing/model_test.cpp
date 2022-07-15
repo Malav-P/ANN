@@ -5,10 +5,11 @@
 #include "../classes/Model.hxx"
 #include "../classes/optimizers/SGD.hxx"
 #include "../classes/optimizers/momentum.hxx"
+#include "../classes/loss functions/cross_entropy.hxx"
 
 int main()
 {
-    Model model;
+    Model<CrossEntropy> model;
 
     double in_arr[16] = {1, 2, 3, 4, 5, 6, 7, 8, 9,
                          10, 11, 12, 13, 14, 15, 16};
@@ -55,10 +56,15 @@ int main()
 
     // must call model.Forward(input, output) before calling Backward function because
     // _local_input member variable must be filled
+    double tar_arr[2] = {1, 0};
+    Vector<double> target(output.get_len(), tar_arr);
+    dLdY = model.get_grad(output, target);
+
     model.Backward(dLdY, dLdX);
 
     // choose an optimizer
     Momentum optimizer(model, 0.1, 0.9);
+//    SGD optimizer;
 
     // update parameters in the network
     model.Update_Params(&optimizer,1);

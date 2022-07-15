@@ -8,15 +8,14 @@
 #include <vector>
 #include "layers/layer_types.hxx"
 #include "helpers/visitors.hxx"
+#include "datasets/dataset.hxx"
 
+template<typename LossFunction>
 class Model {
     public:
 
         // Create a Model object
         Model() = default;
-
-        // Copy constructor
-        Model(const Model&);
 
         // Destructor to release allocated memory
         ~Model() = default;
@@ -27,7 +26,7 @@ class Model {
 
         // train the network on the _data
 
-        void /*return_type TBD */ Train(size_t opt /* args to be filled */ );
+        void Train(size_t opt, DataSet& training_set /* args to be filled */ );
 
         // return outshape of a layer
         Dims get_outshape(size_t idx){ return boost::apply_visitor(Outshape_visitor(), network[idx]);}
@@ -48,8 +47,14 @@ class Model {
         // get const reference to vector of layers
         std::vector<LayerTypes> get_network() const {return network;}
 
+        // calculate grad of output / target pair (FOR TESTING PURPOSES)
+        Vector<double> get_grad(Vector<double>& output, Vector<double>& target) {return loss.grad(output, target);}
+
+
     private:
         std::vector<LayerTypes> network;
+
+        LossFunction loss;
 
 };
 

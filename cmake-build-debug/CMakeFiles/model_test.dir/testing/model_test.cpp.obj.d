@@ -629,6 +629,9 @@ CMakeFiles/model_test.dir/testing/model_test.cpp.obj: \
  C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/helpers/visitors.hxx \
  C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/helpers/pair.hxx \
  C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/lin_alg/data_types.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/datasets/dataset.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/prereqs.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/lin_alg/data_types.hxx \
  C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/Model_impl.hxx \
  C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/Model.hxx \
  C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/algorithm \
@@ -658,7 +661,13 @@ CMakeFiles/model_test.dir/testing/model_test.cpp.obj: \
  C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/ostream.tcc \
  C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/istream \
  C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/istream.tcc \
- C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/optimizers/SGD.hxx \
- C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/lin_alg/data_types.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/optimizers/optimizers.hxx \
  C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/optimizers/momentum.hxx \
- C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/Model.hxx
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/lin_alg/data_types.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/Model.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/optimizers/SGD.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/optimizers/SGD.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/optimizers/momentum.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/loss\ functions/cross_entropy.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/lin_alg/data_types.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/prereqs.hxx

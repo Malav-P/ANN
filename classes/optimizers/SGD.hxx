@@ -27,6 +27,9 @@ class SGD {
     // biases = biases - alpha * gradient
     void Forward(Vector<double>& biases, Vector<double>& gradient, size_t normalizer) {biases += gradient * (-alpha/normalizer);}
 
+    // reset the optimizer for another pass through the network
+    void reset() {/*nothing to do */}
+
     private:
 
     // learning rate

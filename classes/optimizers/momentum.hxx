@@ -18,7 +18,8 @@ public:
     Momentum() = default;
 
     // constructor
-    Momentum(Model& model, double learn_rate, double beta)
+    template <typename L>
+    Momentum(Model<L>& model, double learn_rate, double beta)
             : alpha(learn_rate),
               beta(beta),
               velocities_mat(new Mat<double>*[model.get_size()]),
@@ -131,6 +132,9 @@ public:
             biases += (*velocities_vec[k]) * (-alpha);
         }
     }
+
+    // reset the layer counter of the optimizer
+    void reset() { k = 0;}
 
     // for debugging
     void print_vel_mat()
