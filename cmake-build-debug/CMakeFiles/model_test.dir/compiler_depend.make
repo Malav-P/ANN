@@ -668,11 +668,11 @@ CMakeFiles/model_test.dir/testing/model_test.cpp.obj: ../testing/model_test.cpp 
   ../classes/lin_alg/data_types.hxx \
   ../classes/Model.hxx \
   ../classes/optimizers/SGD.hxx \
-  ../classes/optimizers/SGD.hxx \
-  ../classes/optimizers/momentum.hxx \
+  ../classes/loss\ functions/loss_functions.hxx \
   ../classes/loss\ functions/cross_entropy.hxx \
   ../classes/lin_alg/data_types.hxx \
-  ../classes/prereqs.hxx
+  ../classes/prereqs.hxx \
+  ../classes/loss\ functions/mean_square_error.hxx
 
 
 C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/vector:
@@ -864,6 +864,8 @@ C:/MinGW/i686-w64-mingw32/include/corecrt_startup.h:
 ../classes/lin_alg/vector.hxx:
 
 C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h:
+
+../classes/loss\ functions/loss_functions.hxx:
 
 C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/typeinfo:
 
@@ -1986,3 +1988,5 @@ C:/MinGW/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/istream:
 ../classes/optimizers/momentum.hxx:
 
 ../classes/loss\ functions/cross_entropy.hxx:
+
+../classes/loss\ functions/mean_square_error.hxx:

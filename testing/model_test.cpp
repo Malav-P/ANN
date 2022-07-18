@@ -3,9 +3,7 @@
 //
 
 #include "../classes/Model.hxx"
-#include "../classes/optimizers/SGD.hxx"
-#include "../classes/optimizers/momentum.hxx"
-#include "../classes/loss functions/cross_entropy.hxx"
+#include "../classes/loss functions/loss_functions.hxx"
 
 int main()
 {

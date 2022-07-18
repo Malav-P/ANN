@@ -666,8 +666,8 @@ CMakeFiles/model_test.dir/testing/model_test.cpp.obj: \
  C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/lin_alg/data_types.hxx \
  C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/Model.hxx \
  C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/optimizers/SGD.hxx \
- C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/optimizers/SGD.hxx \
- C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/optimizers/momentum.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/loss\ functions/loss_functions.hxx \
  C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/loss\ functions/cross_entropy.hxx \
  C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/lin_alg/data_types.hxx \
- C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/prereqs.hxx
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/prereqs.hxx \
+ C:/Users/malav/CLionProjects/ANN-master/ANN-master/classes/loss\ functions/mean_square_error.hxx
