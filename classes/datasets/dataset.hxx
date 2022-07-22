@@ -18,7 +18,7 @@ class DataSet
     // constructor
     explicit DataSet(Dims shape)
     : shape(shape)
-    { datapoints.reserve(shape.width);}
+    {}
 
     // the data
     std::vector<Vector_Pair> datapoints;

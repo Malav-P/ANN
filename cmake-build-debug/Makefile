@@ -64,16 +64,6 @@ CMAKE_BINARY_DIR = C:\Users\malav\CLionProjects\ANN-master\ANN-master\cmake-buil
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"D:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -83,6 +73,16 @@ edit_cache:
 # Special rule for the target edit_cache
 edit_cache/fast: edit_cache
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	"D:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -114,6 +114,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named readmnist_test
+
+# Build rule for target.
+readmnist_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 readmnist_test
+.PHONY : readmnist_test
+
+# fast build rule for target.
+readmnist_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\readmnist_test.dir\build.make CMakeFiles/readmnist_test.dir/build
+.PHONY : readmnist_test/fast
 
 #=============================================================================
 # Target rules for targets named linalg_test
@@ -192,6 +205,30 @@ linear_test: cmake_check_build_system
 linear_test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\linear_test.dir\build.make CMakeFiles/linear_test.dir/build
 .PHONY : linear_test/fast
+
+mnist/read_mnist_impl.obj: mnist/read_mnist_impl.cpp.obj
+.PHONY : mnist/read_mnist_impl.obj
+
+# target to build an object file
+mnist/read_mnist_impl.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\readmnist_test.dir\build.make CMakeFiles/readmnist_test.dir/mnist/read_mnist_impl.cpp.obj
+.PHONY : mnist/read_mnist_impl.cpp.obj
+
+mnist/read_mnist_impl.i: mnist/read_mnist_impl.cpp.i
+.PHONY : mnist/read_mnist_impl.i
+
+# target to preprocess a source file
+mnist/read_mnist_impl.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\readmnist_test.dir\build.make CMakeFiles/readmnist_test.dir/mnist/read_mnist_impl.cpp.i
+.PHONY : mnist/read_mnist_impl.cpp.i
+
+mnist/read_mnist_impl.s: mnist/read_mnist_impl.cpp.s
+.PHONY : mnist/read_mnist_impl.s
+
+# target to generate assembly for a file
+mnist/read_mnist_impl.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\readmnist_test.dir\build.make CMakeFiles/readmnist_test.dir/mnist/read_mnist_impl.cpp.s
+.PHONY : mnist/read_mnist_impl.cpp.s
 
 testing/convolution_test.obj: testing/convolution_test.cpp.obj
 .PHONY : testing/convolution_test.obj
@@ -337,6 +374,30 @@ testing/model_test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\model_test.dir\build.make CMakeFiles/model_test.dir/testing/model_test.cpp.s
 .PHONY : testing/model_test.cpp.s
 
+testing/readmnist_test.obj: testing/readmnist_test.cpp.obj
+.PHONY : testing/readmnist_test.obj
+
+# target to build an object file
+testing/readmnist_test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\readmnist_test.dir\build.make CMakeFiles/readmnist_test.dir/testing/readmnist_test.cpp.obj
+.PHONY : testing/readmnist_test.cpp.obj
+
+testing/readmnist_test.i: testing/readmnist_test.cpp.i
+.PHONY : testing/readmnist_test.i
+
+# target to preprocess a source file
+testing/readmnist_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\readmnist_test.dir\build.make CMakeFiles/readmnist_test.dir/testing/readmnist_test.cpp.i
+.PHONY : testing/readmnist_test.cpp.i
+
+testing/readmnist_test.s: testing/readmnist_test.cpp.s
+.PHONY : testing/readmnist_test.s
+
+# target to generate assembly for a file
+testing/readmnist_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\readmnist_test.dir\build.make CMakeFiles/readmnist_test.dir/testing/readmnist_test.cpp.s
+.PHONY : testing/readmnist_test.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -351,6 +412,10 @@ help:
 	@echo ... maxpool_test
 	@echo ... meanpool_test
 	@echo ... model_test
+	@echo ... readmnist_test
+	@echo ... mnist/read_mnist_impl.obj
+	@echo ... mnist/read_mnist_impl.i
+	@echo ... mnist/read_mnist_impl.s
 	@echo ... testing/convolution_test.obj
 	@echo ... testing/convolution_test.i
 	@echo ... testing/convolution_test.s
@@ -369,6 +434,9 @@ help:
 	@echo ... testing/model_test.obj
 	@echo ... testing/model_test.i
 	@echo ... testing/model_test.s
+	@echo ... testing/readmnist_test.obj
+	@echo ... testing/readmnist_test.i
+	@echo ... testing/readmnist_test.s
 .PHONY : help
 
 

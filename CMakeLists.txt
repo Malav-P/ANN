@@ -11,4 +11,4 @@ add_executable(maxpool_test testing/maxpool_test.cpp)
 add_executable(meanpool_test testing/meanpool_test.cpp)
 add_executable(linear_test testing/linear_test.cpp)
 add_executable(model_test testing/model_test.cpp)
-
+add_executable(readmnist_test testing/readmnist_test.cpp mnist/read_mnist_impl.cpp)

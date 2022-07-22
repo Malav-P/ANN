@@ -51,6 +51,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/readmnist_test.dir/DependInfo.cmake"
   "CMakeFiles/linalg_test.dir/DependInfo.cmake"
   "CMakeFiles/convolution_test.dir/DependInfo.cmake"
   "CMakeFiles/maxpool_test.dir/DependInfo.cmake"
